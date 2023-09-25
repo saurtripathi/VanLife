@@ -7,7 +7,7 @@ export default function About() {
 
     return (
         <>
-            <div className='container--about'>
+            <div>
                 <section className='mlr'>
                     <img src='/About_Image.png' alt="About page image" />
                 </section>
@@ -36,9 +36,6 @@ export default function About() {
                         </Link>
                     </div>
                 </section>
-                {/* <footer>
-                    Ⓒ 2022 #VANLIFE
-                </footer> */}
             </div>
 
         </>

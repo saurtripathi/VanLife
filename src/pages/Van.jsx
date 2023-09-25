@@ -1,5 +1,5 @@
 import { React, useContext, createContext, useState } from 'react'
-import { Link,useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import VanClicked from './VanClicked'
 
 
@@ -21,21 +21,21 @@ export default function Van({ van }) {
             <div className='van--card'  >
                 {/* <Link to={`/vans/${van.id}`} van={van}   > */}
                 {/* converted to relative path */}
-                 {/* we can get rid of template string as id is string in server.js file */}
-                <Link to={van.id} van={van}  
-                state={{
-                        search:`?${searchParams.toString()}`,
-                        type:typefilter
-                        }}
+                {/* we can get rid of template string as id is string in server.js file */}
+                <Link to={van.id} van={van}
+                    state={{
+                        search: `?${searchParams.toString()}`,
+                        type: typefilter
+                    }}
                 >
                     <img src={van.imageUrl} className='van--image' />
                 </Link>
                 <div>
                     <h5>{van.name}</h5>
-                    <div>
-                        <span>${van.price}</span>
-                        <span>/day</span>
-                    </div>
+                    {/* <div> */}
+                    <p><span>${van.price}</span>
+                        <span>/day</span></p>
+                    {/* </div> */}
                 </div>
                 <span style={typeVanStyle}>{van.type}</span>
             </div>

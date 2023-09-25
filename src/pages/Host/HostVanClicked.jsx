@@ -65,6 +65,7 @@ export default function HostVanClicked() {
                 <Link
                     to=".."
                     relative='path'
+                    style={{color:'#4D4D4D'}}
                 >Back to all vans</Link></h5>
 
 

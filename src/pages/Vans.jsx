@@ -17,7 +17,7 @@ export default function Vans() {
         async function fetchData() {
             setLoading(true)
             try {
-                const  vans  = await getVans()
+                const vans = await getVans()
                 setVanArray(vans)
             } catch (err) {
                 console.log(err)
@@ -59,44 +59,39 @@ export default function Vans() {
 
     return (
         <>
-            <div className='container--vans' >
-                <h1 className='vanlist--heading'>Explore our van options</h1>
-                <div className='vanlist--tabs'>
-                    {/* <Link style={{textDecoration:'none'}} to="?type=Simple" ><span>Simple</span></Link>
-                    <Link style={{textDecoration:'none'}} to="?type=Luxury" ><span>Luxury</span></Link>
-                    <Link style={{textDecoration:'none'}} to="?type=Rugged" ><span>Rugged</span></Link>
-                    <Link style={{textDecoration:'none'}} to="." ><span>Clear filters</span></Link> */}
-                    <button
-
-                        onClick={() => handleClick('type', 'simple')}
-                        className={
-                            `van--type simple ${type === "simple" ? "selected" : ""}`
-                        }
-                    >
-                        Simple
-                    </button>
-                    <button
-                        onClick={() => handleClick('type', 'luxury')}
-                        className={
-                            `van--type luxury ${type === "luxury" ? "selected" : ""}`
-                        }
-                    >
-                        Luxury
-                    </button>
-                    <button
-                        onClick={() => handleClick('type', 'rugged')}
-                        className={
-                            `van--type rugged ${type === "rugged" ? "selected" : ""}`
-                        }
-                    >
-                        Rugged
-                    </button>
-                    <button className='van--type clear' onClick={() => setSearchParams("")} >Clear filters</button>
-                </div>
-                <div className='vanlist--vans'>
-                    {vanElements}
-                </div>
+            {/* <div className='container--vans' > */}
+            <h1 className='vanlist--heading'>Explore our van options</h1>
+            <div className='vanlist--tabs'>
+                <button
+                    onClick={() => handleClick('type', 'simple')}
+                    className={
+                        `van--type simple ${type === "simple" ? "selected" : ""}`
+                    }
+                >
+                    Simple
+                </button>
+                <button
+                    onClick={() => handleClick('type', 'luxury')}
+                    className={
+                        `van--type luxury ${type === "luxury" ? "selected" : ""}`
+                    }
+                >
+                    Luxury
+                </button>
+                <button
+                    onClick={() => handleClick('type', 'rugged')}
+                    className={
+                        `van--type rugged ${type === "rugged" ? "selected" : ""}`
+                    }
+                >
+                    Rugged
+                </button>
+                <button className='van--type clear' onClick={() => setSearchParams("")} >Clear filters</button>
             </div>
+            <div className='vanlist--vans'>
+                {vanElements}
+            </div>
+            {/* </div> */}
         </>
 
 

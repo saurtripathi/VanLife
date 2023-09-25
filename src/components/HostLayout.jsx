@@ -11,72 +11,72 @@ export default function HostLayout() {
     return (
         <>
 
-            <div className='container container--modified'>
-                <Nav>
+            {/* <div className='container container--modified'> */}
+            <Nav>
 
-                    <NavLink
-                        end
-                        // to=".."
-                        // relative='path'
-                        to='.'
-                        style={
-                            ({ isActive }) => {
-                                return {
-                                    fontWeight: isActive ? 'bold' : 400,
-                                    textDecoration: isActive ? 'underline' : 'none'
-                                }
+                <NavLink
+                    end
+                    // to=".."
+                    // relative='path'
+                    to='.'
+                    style={
+                        ({ isActive }) => {
+                            return {
+                                fontWeight: isActive ? 'bold' : 400,
+                                textDecoration: isActive ? 'underline' : 'none'
                             }
                         }
+                    }
 
-                    >
-                        Dashboard
-                    </NavLink>
-                    <NavLink
-                        to="income"
-                        style={
-                            ({ isActive }) => {
-                                return {
-                                    fontWeight: isActive ? 'bold' : '400',
-                                    textDecoration: isActive ? 'underline' : 'none'
-                                    // color: isActive ? 'red' : 'blue'
-                                }
+                >
+                    Dashboard
+                </NavLink>
+                <NavLink
+                    to="income"
+                    style={
+                        ({ isActive }) => {
+                            return {
+                                fontWeight: isActive ? 'bold' : '400',
+                                textDecoration: isActive ? 'underline' : 'none'
+                                // color: isActive ? 'red' : 'blue'
                             }
                         }
-                    >
-                        Income
-                    </NavLink>
-                    <NavLink
-                        to='vans'
-                        style={
-                            ({ isActive }) => {
-                                return {
-                                    fontWeight: isActive ? 'bold' : '400',
-                                    textDecoration: isActive ? 'underline' : 'none'
-                                    // color: isActive ? 'red' : 'blue'
-                                }
+                    }
+                >
+                    Income
+                </NavLink>
+                <NavLink
+                    to='vans'
+                    style={
+                        ({ isActive }) => {
+                            return {
+                                fontWeight: isActive ? 'bold' : '400',
+                                textDecoration: isActive ? 'underline' : 'none'
+                                // color: isActive ? 'red' : 'blue'
                             }
                         }
-                    >
-                        Vans
-                    </NavLink>
-                    <NavLink
-                        to='reviews'
-                        style={
-                            ({ isActive }) => {
-                                return {
-                                    fontWeight: isActive ? 'bold' : '400',
-                                    textDecoration: isActive ? 'underline' : 'none'
-                                    // color: isActive ? 'red' : 'blue'
-                                }
+                    }
+                >
+                    Vans
+                </NavLink>
+                <NavLink
+                    to='reviews'
+                    style={
+                        ({ isActive }) => {
+                            return {
+                                fontWeight: isActive ? 'bold' : '400',
+                                textDecoration: isActive ? 'underline' : 'none'
+                                // color: isActive ? 'red' : 'blue'
                             }
                         }
-                    >
-                        Reviews
-                    </NavLink>
+                    }
+                >
+                    Reviews
+                </NavLink>
 
-                </Nav>
-                <Outlet />
-            </div>
+            </Nav>
+            <Outlet />
+            {/* </div> */}
         </>
 
     )
